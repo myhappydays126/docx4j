@@ -336,7 +336,7 @@ public class XsltFOFunctions {
 					// 2018 05, actually, sz also affects line spacing (eg 12 pt on block
             		// with 11 pt inside would have more space), so its important
             		RPr fontSzOnlyRPr = new RPr();
-            		if (pPrDirect.getRPr()!=null && pPrDirect.getRPr().getSz()!=null) {
+            		if (pPrDirect.getRPr()!=null && pPrDirect.getRPr().getSz()!=null && pPrDirect.getNumPr().getNumId()!=null  && pPrDirect.getNumPr().getIlvl()!=null) {
             			HpsMeasure hm = new HpsMeasure(); 
             			hm.setVal( pPrDirect.getRPr().getSz().getVal() ); // does this suffice as a copy?
                 		fontSzOnlyRPr.setSz(hm);
